@@ -1,0 +1,102 @@
+<p-sidebar
+  [(visible)]="showSideBar"
+  position="right"
+  [baseZIndex]="10000"
+  (onHide)="hide()"
+  [style]="{'width':'30%'}"
+>
+  <h4 class="add-course-label">Add Course</h4>
+  <form [formGroup]="formGroup" (ngSubmit)="submit()">
+    <div class="form-group">
+      <input pInputText placeholder="Title" formControlName="title" required />
+    </div>
+    <div class="form-group">
+      <input
+        pInputText
+        placeholder="Provider"
+        formControlName="provider"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <p-dropdown
+        [options]="categories"
+        optionLabel="name"
+        formControlName="category"
+        placeholder="Select a Category"
+        [autoWidth]="false"
+        [style]="{'width':'100%'}"
+        required
+      ></p-dropdown>
+    </div>
+    <div class="form-group">
+      <input
+        pInputText
+        placeholder="Description"
+        formControlName="description"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <p-calendar
+        placeholder="Start date"
+        formControlName="startDate"
+        [inputStyle]="{'width':'100%'}"
+        [style]="{'width':'100%'}"
+        required
+      ></p-calendar>
+    </div>
+    <div class="form-group">
+      <p-calendar
+        placeholder="Complete date"
+        formControlName="completeDate"
+        [inputStyle]="{'width':'100%'}"
+        [style]="{'width':'100%'}"
+        required
+      ></p-calendar>
+    </div>
+    <div class="form-group">
+      <p-dropdown
+        [options]="statuses"
+        optionLabel="name"
+        formControlName="status"
+        placeholder="Select a Status"
+        [autoWidth]="false"
+        [style]="{'width':'100%'}"
+        required
+      ></p-dropdown>
+    </div>
+    <div class="form-group">
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon">www</span>
+        <input
+          type="text"
+          pInputText
+          placeholder="Website"
+          formControlName="link"
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <p-toggleButton
+        formControlName="print"
+        onLabel="Printed"
+        offLabel="Not Printed"
+        [style]="{'width':'150px'}"
+      ></p-toggleButton>
+    </div>
+    <button
+      pButton
+      type="button"
+      label="Add"
+      class="ui-button-success"
+      (click)="addCourse()"
+    ></button>
+    <button
+      pButton
+      type="button"
+      label="Cancel"
+      class="ui-button-danger"
+    ></button>
+  </form>
+</p-sidebar>

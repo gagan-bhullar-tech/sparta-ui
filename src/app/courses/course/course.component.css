@@ -1,0 +1,29 @@
+.expansionPanel {
+    margin-bottom: 9px;
+    background-color: #3A3F44;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+mat-panel-description {
+    flex-grow: 0;
+}
+
+.alignCat {
+    flex-grow: 1;
+}
+
+.alignCompletedate {
+    flex-grow: 0;
+}
+
+.editButton {
+    padding-left: 15px;
+}
+
+.fa-pencil-square-o {
+    font-size: 16px;
+}
