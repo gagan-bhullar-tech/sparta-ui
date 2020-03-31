@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <p-progressSpinner></p-progressSpinner>
   `,
-  styleUrls: ['./progress-spinner.component.css']
+  styleUrls: ['./progress-spinner.component.scss']
 })
 export class ProgressSpinnerComponent implements OnInit {
   constructor() {}

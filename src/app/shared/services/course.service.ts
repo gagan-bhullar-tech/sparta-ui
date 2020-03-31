@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
 
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import Course from '../models/course.model';
+import Course from '../../core/models/course.model';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { LoaderService } from './loader.service';
 
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class CourseService {
   apiCourseUrl: string = environment.url + '/api/course';
 
-  constructor(private http: Http, private loaderService: LoaderService) {}
+  constructor(private http: HttpClient, private loaderService: LoaderService) {}
 
   getCourses(): Observable<Course[]> {
     this.loaderService.display(true);

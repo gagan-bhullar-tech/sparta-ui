@@ -9,7 +9,7 @@ import { ToastService } from '../../services/toast.service';
 @Component({
   selector: 'add-course',
   templateUrl: './add-course.component.html',
-  styleUrls: ['./add-course.component.css']
+  styleUrls: ['./add-course.component.scss']
 })
 export class AddCourseComponent implements OnInit {
   @Input() showSideBar;

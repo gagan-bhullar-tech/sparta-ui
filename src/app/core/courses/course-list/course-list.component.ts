@@ -6,7 +6,7 @@ import { CourseService } from '../../services/course.service';
 @Component({
   selector: 'course-list',
   templateUrl: './course-list.component.html',
-  styleUrls: ['./course-list.component.css']
+  styleUrls: ['./course-list.component.scss']
 })
 export class CourseListComponent implements OnInit {
   courses: Course[];
