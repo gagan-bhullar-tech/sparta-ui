@@ -19,7 +19,7 @@ export class CourseService {
     this.loaderService.display(true);
     return this.http
       .get(this.apiCourseUrl)
-      .map(res => {
+      .map((res: any) => {
         console.log('in this', res);
         this.loaderService.display(false);
         return res.json().data.docs.map(item => {

@@ -2,32 +2,35 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CourseListComponent } from './courses/course-list/course-list.component';
 import { CourseComponent } from './courses/course/course.component';
-import { NavbarComponent } from '../shared/navbar/navbar.component';
-import { SearchPipe } from '../shared/filter/search.pipe';
-import { ProgressSpinnerComponent } from '../shared/progress-spinner/progress-spinner.component';
-import { DialogComponent } from '../shared/dialog/dialog.component';
 import { AddCourseComponent } from './courses/add-course/add-course.component';
+
+import {ToggleButtonModule} from 'primeng/togglebutton';
+import {DropdownModule} from 'primeng/dropdown';
+import {CalendarModule} from 'primeng/calendar';
+import {SidebarModule} from 'primeng/sidebar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastService } from '../shared/services/toast.service';
+import { CourseService } from '../shared/services/course.service';
+import { LoaderService } from '../shared/services/loader.service';
 
 @NgModule({
   declarations: [
     CourseListComponent,
     CourseComponent,
-    NavbarComponent,
-    SearchPipe,
-    ProgressSpinnerComponent,
-    DialogComponent,
     AddCourseComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ToggleButtonModule,
+    DropdownModule,
+    CalendarModule,
+    SidebarModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CourseService, LoaderService, ToastService],
   exports: [CourseListComponent, 
     CourseComponent,
-    NavbarComponent,
-    SearchPipe,
-    ProgressSpinnerComponent,
-    DialogComponent,
     AddCourseComponent]
 })
 export class CoreModule { }

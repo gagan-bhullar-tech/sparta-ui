@@ -1,10 +1,10 @@
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { LoaderService } from '../../services/loader.service';
-import { CourseService } from '../../services/course.service';
+import { LoaderService } from '../../../shared/services/loader.service';
+import { CourseService } from '../../../shared/services/course.service';
 import Course from '../../models/course.model';
 import { Router } from '@angular/router';
-import { ToastService } from '../../services/toast.service';
+import { ToastService } from '../../../shared/services/toast.service';
 
 @Component({
   selector: 'add-course',
