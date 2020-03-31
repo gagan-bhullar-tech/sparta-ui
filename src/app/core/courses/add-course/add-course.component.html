@@ -6,7 +6,7 @@
   [style]="{'width':'30%'}"
 >
   <h4 class="add-course-label">Add Course</h4>
-  <form [formGroup]="formGroup" (ngSubmit)="submit()">
+  <form [formGroup]="formGroup" (ngSubmit)="addCourse()">
     <div class="form-group">
       <input pInputText placeholder="Title" formControlName="title" required />
     </div>

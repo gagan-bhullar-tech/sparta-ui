@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CourseListComponent } from './courses/course-list/course-list.component';
-import { CourseComponent } from './courses/course/course.component';
 import { AddCourseComponent } from './courses/add-course/add-course.component';
 
 import {ToggleButtonModule} from 'primeng/togglebutton';
@@ -13,10 +12,10 @@ import { ToastService } from '../shared/services/toast.service';
 import { CourseService } from '../shared/services/course.service';
 import { LoaderService } from '../shared/services/loader.service';
 
+
 @NgModule({
   declarations: [
     CourseListComponent,
-    CourseComponent,
     AddCourseComponent
   ],
   imports: [
@@ -30,7 +29,6 @@ import { LoaderService } from '../shared/services/loader.service';
   ],
   providers: [CourseService, LoaderService, ToastService],
   exports: [CourseListComponent, 
-    CourseComponent,
     AddCourseComponent]
 })
 export class CoreModule { }
