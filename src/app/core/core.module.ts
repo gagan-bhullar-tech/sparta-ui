@@ -11,16 +11,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastService } from '../shared/services/toast.service';
 import { CourseService } from '../shared/services/course.service';
 import { LoaderService } from '../shared/services/loader.service';
+import { CourseComponent } from './courses/course/course.component';
 
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
     CourseListComponent,
+    CourseComponent,
     AddCourseComponent
   ],
   imports: [
     BrowserModule,
     ToggleButtonModule,
+    MatExpansionModule,
     DropdownModule,
     CalendarModule,
     SidebarModule,
@@ -28,7 +32,7 @@ import { LoaderService } from '../shared/services/loader.service';
     ReactiveFormsModule
   ],
   providers: [CourseService, LoaderService, ToastService],
-  exports: [CourseListComponent, 
+  exports: [CourseListComponent, CourseComponent,
     AddCourseComponent]
 })
 export class CoreModule { }
