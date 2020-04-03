@@ -2,7 +2,7 @@
 <navbar></navbar>
 <div class="container">
   <p-toast position="top-left"></p-toast>
-  <a href="#" (click)="addCourse()" class="icon-add-course"
+  <a (click)="addCourse()" class="icon-add-course"
     ><fa-icon
       [icon]="faPlusCircle"
       size="lg"
@@ -11,7 +11,6 @@
   ></a>
   <router-outlet>
     <span *ngIf="showLoader">
-      showLoader {{showLoader}} This is here
       <progress-spinner></progress-spinner>
     </span>
   </router-outlet>
