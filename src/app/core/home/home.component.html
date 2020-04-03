@@ -1,0 +1,11 @@
+<a (click)="addCourse()" class="icon-add-course"
+    ><fa-icon
+      [icon]="faPlusCircle"
+      size="lg"
+      [styles]="{'color': 'gray'}"
+    ></fa-icon
+></a>
+<add-course
+    [showSideBar]="showSideBar"
+    (onHideSidebar)="resetSideBar()"
+></add-course>

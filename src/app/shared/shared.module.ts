@@ -4,8 +4,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SearchPipe } from './filter/search.pipe';
 import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
 import { DialogComponent } from './dialog/dialog.component';
-import {SpinnerModule} from 'primeng/spinner';
 import { MessageService } from 'primeng/api';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { MessageService } from 'primeng/api';
   ],
   imports: [
     BrowserModule,
-    SpinnerModule
+    ProgressSpinnerModule
   ],
   providers: [MessageService],
   exports: [

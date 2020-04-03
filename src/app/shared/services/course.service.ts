@@ -11,7 +11,7 @@ import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class CourseService {
-  apiCourseUrl: string = environment.url + '/api/course';
+  apiCourseUrl: string = environment.url + '/v1/courses';
 
   constructor(private http: HttpClient, private loaderService: LoaderService) {}
 

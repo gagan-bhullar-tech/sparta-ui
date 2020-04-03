@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'https://home-multiapp-api.herokuapp.com'
+  url: 'http://localhost:3000'
 };
 
 /*

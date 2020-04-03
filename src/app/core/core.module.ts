@@ -14,12 +14,14 @@ import { LoaderService } from '../shared/services/loader.service';
 import { CourseComponent } from './courses/course/course.component';
 
 import {MatExpansionModule} from '@angular/material/expansion';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     CourseListComponent,
     CourseComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
